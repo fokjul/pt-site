@@ -1,0 +1,48 @@
+// Import partials using @use syntax
+@use '../../../style/partials/index' as p;
+
+// Footer component styles
+.footer {
+  background: p.$text-dark;
+  color: p.$white;
+  padding: p.$spacing-xl 0 p.$spacing-md;
+  
+  .footer-content {
+    width: 100%;
+    max-width: p.$content-max-width;
+    margin: 0 auto;
+    padding: 0 p.$container-padding;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: p.$spacing-xl;
+    
+    h3 {
+      margin-bottom: p.$spacing-md;
+      color: p.$primary-color;
+    }
+    
+    ul {
+      list-style: none;
+      
+      li {
+        margin-bottom: p.$spacing-sm;
+        
+        a {
+          color: p.$white;
+          text-decoration: none;
+          
+          &:hover {
+            color: p.$primary-color;
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: p.$spacing-xl;
+    padding-top: p.$spacing-md;
+    border-top: 1px solid #555;
+  }
+}

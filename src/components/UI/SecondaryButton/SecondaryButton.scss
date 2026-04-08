@@ -1,0 +1,20 @@
+@use '../../../style/partials/' as p;
+@use 'sass:color';
+
+.btn {
+  &.btn-secondary {
+    background: p.$secondary-color;
+    color: p.$white;
+    padding: p.$spacing-md p.$spacing-xl;
+    border-radius: p.$border-radius-sm;
+    text-decoration: none;
+    font-weight: p.$font-weight-medium;
+    transition: p.$transition-normal;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+      background: color.adjust(p.$secondary-color, $lightness: -10%);
+    }
+  }
+}

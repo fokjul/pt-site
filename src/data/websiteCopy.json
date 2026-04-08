@@ -1,0 +1,101 @@
+{
+  "brand": {
+    "name": "Yuliia Fok PT",
+    "logo": "/logo.png",
+    "tagline": "Transform Your Fitness Journey"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services & Pricing",
+    "booking": "Booking & Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Transform Your Fitness Journey",
+      "subtitle": "Personal training designed for beginners, focused on building confidence and strength in a supportive environment.",
+      "ctaPrimary": "Book Your Session",
+      "ctaSecondary": "View Services"
+    },
+    "intro": {
+      "title": "Welcome to Your Fitness Journey",
+      "paragraph1": "Located at the BCIT Recreational Center in Burnaby, I specialize in helping women and fitness beginners discover their strength through personalized, encouraging training sessions.",
+      "paragraph2": "No judgment, no intimidation - just support, guidance, and celebration of every achievement along the way."
+    }
+  },
+  "about": {
+    "title": "About Yuliia Fok",
+    "qualifications": {
+      "title": "Qualifications & Experience"
+    },
+    "philosophy": {
+      "title": "Training Philosophy"
+    },
+    "testimonials": {
+      "title": "Client Success Stories"
+    }
+  },
+  "services": {
+    "title": "Personal Training Services",
+    "subtitle": "All sessions are conducted in-person at the BCIT Recreational Center, Burnaby, BC",
+    "description": "Perfect for fitness beginners and those looking for personalized guidance in a supportive environment.",
+    "whatToExpect": {
+      "title": "What to Expect in Your Sessions",
+      "points": [
+        "Personalized programming based on your fitness level and goals",
+        "Focus on proper form and technique to ensure safety",
+        "Gradual progression at a comfortable pace",
+        "Education about exercises and fitness principles",
+        "Supportive, non-judgmental environment",
+        "Regular progress assessments and program adjustments"
+      ]
+    },
+    "cta": {
+      "title": "Ready to Start Your Fitness Journey?",
+      "button": "Book Your First Session"
+    }
+  },
+  "booking": {
+    "title": "Book Your Personal Training Session",
+    "subtitle": "Ready to start your fitness journey? Book a session directly through our scheduling system or send me a message.",
+    "bookingSystem": {
+      "title": "Schedule Your Session",
+      "placeholder": "Setmore booking system will be embedded here",
+      "altText": "For now, please use the contact form below to inquire about availability"
+    },
+    "contactForm": {
+      "title": "Or Send a Message",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me about your fitness goals and any questions you have...",
+      "button": "Send Message"
+    },
+    "location": {
+      "title": "Training Location",
+      "venue": "BCIT Recreational Center",
+      "address": "3700 Willingdon Avenue",
+      "city": "Burnaby, BC V5G 3H2",
+      "note": "All sessions are conducted in-person at this location."
+    }
+  },
+  "footer": {
+    "brand": "Yullia Fok Personal Training",
+    "description": "Helping women and fitness beginners build confidence and strength through personalized training.",
+    "location": {
+      "title": "Location",
+      "venue": "BCIT Recreational Center",
+      "address": "3700 Willingdon Avenue",
+      "city": "Burnaby, BC V5G 3H2"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": ["Home", "About", "Services & Pricing", "Booking & Contact"]
+    },
+    "copyright": "© 2026 Yuliia Fok PT. All rights reserved."
+  },
+  "forms": {
+    "successMessage": "Thank you for your message! I will get back to you soon.",
+    "required": "*"
+  }
+}

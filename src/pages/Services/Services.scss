@@ -1,0 +1,151 @@
+// Import partials using @use syntax
+@use '../../style/partials/' as p;
+
+// Services page styles
+.services {
+  .services-header {
+    text-align: center;
+    padding: p.$spacing-4xl p.$container-padding;
+    width: 100%;
+    max-width: p.$content-max-width;
+    margin: 0 auto;
+    
+    h1 {
+      font-size: p.$font-size-4xl;
+      margin-bottom: p.$spacing-xl;
+      color: p.$primary-color;
+    }
+    
+    p {
+      font-size: p.$font-size-lg;
+      margin-bottom: p.$spacing-md;
+      color: p.$text-dark;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .services-list {
+    padding: 0 p.$container-padding p.$spacing-4xl;
+    width: 100%;
+    max-width: p.$content-max-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: p.$spacing-xl;
+    
+    .service-card {
+      background: p.$white;
+      padding: p.$spacing-xl;
+      border-radius: p.$border-radius-md;
+      box-shadow: p.$shadow-md;
+      border-top: 4px solid p.$primary-color;
+      
+      h3 {
+        font-size: p.$font-size-2xl;
+        margin-bottom: p.$spacing-md;
+        color: p.$text-dark;
+      }
+      
+      .service-description {
+        margin-bottom: p.$spacing-xl;
+        line-height: p.$line-height-relaxed;
+        color: p.$text-dark;
+      }
+      
+      .service-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: p.$spacing-md;
+        border-top: 1px solid p.$border-color;
+        
+        .duration {
+          color: p.$text-dark;
+          font-weight: p.$font-weight-medium;
+        }
+        
+        .price {
+          color: p.$primary-color;
+          font-weight: p.$font-weight-bold;
+          font-size: p.$font-size-xl;
+        }
+      }
+    }
+  }
+  
+  .what-to-expect {
+    background: p.$background-light;
+    padding: p.$spacing-4xl p.$container-padding;
+    
+    h2 {
+      font-size: p.$font-size-3xl;
+      margin-bottom: p.$spacing-xl;
+      color: p.$secondary-color;
+      text-align: center;
+    }
+    
+    ul {
+      max-width: 800px;
+      margin: 0 auto;
+      list-style: none;
+      
+      li {
+        background: p.$white;
+        padding: p.$spacing-md p.$spacing-xl;
+        margin-bottom: p.$spacing-sm;
+        border-radius: p.$border-radius-sm;
+        border-left: 4px solid p.$secondary-color;
+        
+        &:before {
+          content: "â";
+          color: p.$secondary-color;
+          font-weight: p.$font-weight-bold;
+          margin-right: p.$spacing-sm;
+        }
+      }
+    }
+  }
+  
+  .cta {
+    text-align: center;
+    padding: p.$spacing-4xl p.$container-padding;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    h2 {
+      font-size: p.$font-size-3xl;
+      margin-bottom: p.$spacing-xl;
+      color: p.$primary-color;
+    }
+  }
+}
+
+// Responsive design for services page
+@media (max-width: 768px) {
+  .services {
+    .services-header {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    .services-list {
+      grid-template-columns: 1fr;
+      padding: 0 1rem 2rem;
+    }
+    
+    .what-to-expect {
+      padding: 2rem 1rem;
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .cta {
+      padding: 2rem 1rem;
+    }
+  }
+}

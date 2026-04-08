@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "name": "Personal Training Session",
+      "description": "One-on-one personalized training session tailored to your fitness goals and experience level.",
+      "duration": "60 minutes",
+      "price": 75
+    },
+    {
+      "id": "2", 
+      "name": "5-Session Package",
+      "description": "Five personal training sessions with progressive programming and ongoing support.",
+      "duration": "60 minutes per session",
+      "price": 350
+    },
+    {
+      "id": "3",
+      "name": "10-Session Package", 
+      "description": "Ten personal training sessions with comprehensive fitness planning and regular progress assessments.",
+      "duration": "60 minutes per session",
+      "price": 650
+    },
+    {
+      "id": "4",
+      "name": "Initial Consultation",
+      "description": "Comprehensive fitness assessment, goal setting, and program planning session.",
+      "duration": "45 minutes", 
+      "price": 50
+    }
+  ]
+}

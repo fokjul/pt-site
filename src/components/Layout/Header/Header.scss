@@ -1,0 +1,107 @@
+// Import partials using @use syntax
+@use '../../../style/partials/index' as p;
+
+// Header component styles
+.header {
+  position: sticky;
+  top: 0;
+  z-index: p.$z-index-sticky;
+  background: p.$nav-background;
+}
+
+.navbar {
+  width: 100%;
+  max-width: p.$content-max-width;
+  margin: 0 auto;
+  padding: p.$spacing-md p.$container-padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: p.$spacing-md;
+  padding: p.$spacing-md p.$mobile-margin;
+  position: relative;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: p.$spacing-md;
+  top: p.$spacing-sm;
+  z-index: p.$z-index-tooltip;
+  color: p.$text-dark;
+  
+}
+
+.nav-brand {
+  .brand-link {
+    font-size: p.$font-size-xl;
+    font-weight: p.$font-weight-bold;
+    color: p.$primary-color;
+    text-decoration: none;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: p.$font-size-2xl;
+  cursor: pointer;
+  padding: p.$spacing-sm;
+  
+  &:hover {
+    color: p.$primary-color;
+  }
+  
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: p.$spacing-xl;
+}
+  
+  .nav-link {
+    color: p.$text-dark;
+    text-decoration: none;
+    font-weight: p.$font-weight-medium;
+    transition: p.$transition-normal;
+    
+    &:hover, &.active {
+      color: p.$primary-color;
+    }
+  }
+
+// Responsive design for header
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  
+  .navbar {
+    gap: p.$spacing-md;
+    padding: p.$spacing-md p.$mobile-margin;
+  }
+  
+  .nav-menu {
+    display: none;
+    
+    &--open {
+      display: flex;
+      flex-direction: column;
+      padding: p.$spacing-xl;
+      gap: p.$spacing-lg;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100vh;
+      background: p.$nav-background;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      transform: translateX(0);
+      transition: transform 0.3s ease-in-out;
+      z-index: p.$z-index-modal;
+      }
+  }
+}

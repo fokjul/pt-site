@@ -1,0 +1,55 @@
+// Main SCSS file that imports all partials using @use
+@use 'style/partials/colors' as colors;
+@use 'style/partials/fonts' as fonts;
+@use 'style/partials/breakpoints' as breakpoints;
+@use 'style/partials/variables' as variables;
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: fonts.$font-family-primary;
+  line-height: fonts.$line-height-normal;
+  color: colors.$text-dark;
+}
+
+.app {
+  max-width: variables.$content-max-width;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-left: none;
+  border-right: none;
+  margin: 0 auto;
+}
+
+.main-content {
+  flex: 1;
+  border: none;
+  border-left: none;
+  border-right: none;
+}
+
+// Button styles
+.btn {
+  display: inline-block;
+  padding: variables.$spacing-md variables.$spacing-xl;
+  border-radius: variables.$border-radius-sm;
+  text-decoration: none;
+  font-weight: fonts.$font-weight-medium;
+  transition: variables.$transition-normal;
+  border: none;
+  cursor: pointer;
+
+  
+  
+}
