@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import websiteCopy from '../../data/websiteCopy.json';
 import PrimaryButton from '../../components/UI/PrimaryButton/PrimaryButton';
-import SecondaryButton from '../../components/UI/SecondaryButton/SecondaryButton';
 import './Booking.scss';
 
 const Booking = () => {
@@ -11,87 +10,134 @@ const Booking = () => {
     message: ''
   });
 
+useEffect(() => {
+  const script = document.createElement('script');
+  script.src = 'https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js';
+  script.id = 'anywhere_book_now_script';
+
+  script.onload = () => {
+    // Simulate DOMContentLoaded AFTER script loads
+    document.dispatchEvent(new Event('DOMContentLoaded'));
+  };
+
+  document.body.appendChild(script);
+}, []);
+``
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the data to a server
     alert(websiteCopy.forms.successMessage);
     setFormData({ name: '', email: '', message: '' });
   };
 
   return (
     <div className="booking">
+      {/* Header */}
       <section className="booking-header">
         <h1>{websiteCopy.booking.title}</h1>
         <p>{websiteCopy.booking.subtitle}</p>
       </section>
-      
+
+      {/* Booking System */}
       <section className="booking-system">
         <h2>{websiteCopy.booking.bookingSystem.title}</h2>
+
         <div className="booking-embed">
-          {/* This will be replaced with actual Setmore.com embed code */}
-          <div className="placeholder-booking">
-            <p>{websiteCopy.booking.bookingSystem.placeholder}</p>
-            <p>{websiteCopy.booking.bookingSystem.altText}</p>
-          </div>
+          {/* OFFICIAL SETMORE BUTTON */}
+          <button
+            id="Anywhere_button_iframe"
+            className="anywhere-book-now-button"
+            style={{
+              backgroundColor: '#000',
+              color: '#fff',
+              border: 'none',
+              padding: '12px 18px',
+              fontSize: '14px',
+              fontWeight: 600,
+              borderRadius: '6px',
+              cursor: 'pointer'
+            }}
+            data-booking-url="https://yuliia-fok-pt.setmore.com"
+            data-new-tab="true"
+          >
+            Book now
+          </button>
         </div>
       </section>
-      
+
+      {/* Contact Form */}
       <section className="contact-form-section">
         <h2>{websiteCopy.booking.contactForm.title}</h2>
-        <form onSubmit={handleSubmit} className="contact-form">
+
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">{websiteCopy.booking.contactForm.nameLabel} {websiteCopy.forms.required}</label>
+            <label htmlFor="name">
+              {websiteCopy.booking.contactForm.nameLabel}{' '}
+              {websiteCopy.forms.required}
+            </label>
             <input
-              type="text"
               id="name"
               name="name"
+              type="text"
               value={formData.name}
               onChange={handleChange}
               required
             />
           </div>
-          
+
           <div className="form-group">
-            <label htmlFor="email">{websiteCopy.booking.contactForm.emailLabel} {websiteCopy.forms.required}</label>
+            <label htmlFor="email">
+              {websiteCopy.booking.contactForm.emailLabel}{' '}
+              {websiteCopy.forms.required}
+            </label>
             <input
-              type="email"
               id="email"
               name="email"
+              type="email"
               value={formData.email}
               onChange={handleChange}
               required
             />
           </div>
-          
+
           <div className="form-group">
-            <label htmlFor="message">{websiteCopy.booking.contactForm.messageLabel} {websiteCopy.forms.required}</label>
+            <label htmlFor="message">
+              {websiteCopy.booking.contactForm.messageLabel}{' '}
+              {websiteCopy.forms.required}
+            </label>
             <textarea
               id="message"
               name="message"
+              rows="5"
               value={formData.message}
               onChange={handleChange}
+              placeholder={
+                websiteCopy.booking.contactForm.messagePlaceholder
+              }
               required
-              rows="5"
-              placeholder={websiteCopy.booking.contactForm.messagePlaceholder}
-            ></textarea>
+            />
           </div>
-          
-          <PrimaryButton type="submit" className="btn btn-primary">
+
+          <PrimaryButton type="submit">
             {websiteCopy.booking.contactForm.button}
           </PrimaryButton>
         </form>
       </section>
-      
+
+      {/* Location Info */}
       <section className="location-info">
         <h2>{websiteCopy.booking.location.title}</h2>
-        <p><strong>{websiteCopy.booking.location.venue}</strong></p>
+        <p>
+          <strong>{websiteCopy.booking.location.venue}</strong>
+        </p>
         <p>{websiteCopy.booking.location.address}</p>
         <p>{websiteCopy.booking.location.city}</p>
         <p>{websiteCopy.booking.location.note}</p>
