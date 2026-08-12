@@ -1,0 +1,67 @@
+@import 'functions';
+
+// Responsive breakpoints
+$breakpoints: (
+  "mobile": px-to-rem(320),
+  "tablet": px-to-rem(768),
+  "desktop": px-to-rem(1024),
+  "xl": px-to-rem(1280),
+  "2xl": px-to-rem(1536)
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: (map-get($breakpoints, "tablet") - 0.0625rem)) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: map-get($breakpoints, "tablet")) and (max-width: (map-get($breakpoints, "desktop") - 0.0625rem)) {
+    @content;
+  }
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Grid utilities
+@mixin grid-columns($columns, $gap: 24px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Text utilities
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

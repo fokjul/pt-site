@@ -1,0 +1,15 @@
+@import '../../../styles/partials/variables';
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    color: $color-primary;
+    font-size: 16px;
+
+    &--empty {
+      color: $color-border-light;
+    }
+  }
+}

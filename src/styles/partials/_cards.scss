@@ -1,0 +1,59 @@
+@import 'variables';
+@import 'mixins';
+
+.card {
+  background-color: $color-white;
+  border-radius: $radius-card;
+  padding: $spacing-card-gap;
+
+  &--bordered {
+    border: 1px solid $color-border-light;
+  }
+
+  &--dark-border {
+    border: 1px solid $color-border-dark;
+  }
+
+  &--elevated {
+    box-shadow: $shadow-elevated;
+  }
+
+  &--glass {
+    background-color: $overlay-white-10;
+    border: 1px solid $overlay-white-20;
+    backdrop-filter: blur(10px);
+  }
+
+  &--featured {
+    transform: scale(1.05);
+    border: 2.1px solid $color-primary;
+    box-shadow: $shadow-elevated;
+  }
+}
+
+.icon-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $icon-chip-size;
+  height: $icon-chip-size;
+  background-color: $color-primary;
+  border-radius: $radius-icon-chip;
+  color: $color-white;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px;
+  }
+}
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    color: $color-primary;
+    font-size: 16px;
+  }
+}

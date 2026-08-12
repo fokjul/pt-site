@@ -1,0 +1,113 @@
+@import '../../../styles/partials/variables';
+@import '../../../styles/partials/mixins';
+@import '../../../styles/partials/layouts';
+
+.contact-section {
+  @include section-padding;
+  background-color: $color-surface-alt;
+
+  &__container {
+    @include container-layout;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__heading {
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+    letter-spacing: $letter-spacing-h2;
+    font-weight: $font-weight-regular;
+    color: $color-text-heading;
+    margin: 0;
+  }
+
+  &__subcopy {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    color: $color-text-muted;
+    margin: 0;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__info-heading {
+    font-size: $font-size-h3;
+    line-height: $line-height-h3;
+    letter-spacing: $letter-spacing-h3;
+    font-weight: $font-weight-regular;
+    color: $color-text-heading;
+    margin: 0;
+  }
+
+  &__info-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 256px;
+  }
+
+  &__map-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: $color-surface-muted;
+    border-radius: $radius-image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-text-muted;
+  }
+
+  &__form {
+    background-color: $color-white;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-card;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include tablet-only {
+    &__layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  @include mobile-only {
+    &__layout {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    &__form {
+      padding: 24px;
+    }
+
+    &__heading {
+      font-size: 32px;
+    }
+  }
+}

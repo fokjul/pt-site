@@ -1,0 +1,40 @@
+@import '../../../styles/partials/variables';
+
+.input-wrapper {
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: $font-size-label;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-label;
+    letter-spacing: $letter-spacing-label;
+    color: $color-input-label;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    color: $color-text-body;
+    background-color: $color-input-bg;
+    border: 1px solid transparent;
+    border-radius: $radius-button-small;
+    outline: none;
+    transition: all 0.2s ease;
+
+    &::placeholder {
+      color: $color-input-placeholder;
+    }
+
+    &:focus {
+      border-color: $color-primary;
+      background-color: $color-white;
+    }
+
+    &:disabled {
+      background-color: $color-surface-muted;
+      cursor: not-allowed;
+    }
+  }
+}

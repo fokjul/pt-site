@@ -1,0 +1,33 @@
+@import "functions";
+@import "colors";
+
+/* Margins & Paddings */
+$size-4xl: px-to-rem(80); 
+$size-3xl: px-to-rem(64); 
+$size-2xl: px-to-rem(48);
+$size-xl: px-to-rem(40); 
+$size-l: px-to-rem(32); 
+$size-m: px-to-rem(24);
+$size-s: px-to-rem(16); 
+$size-xs: px-to-rem(8); 
+$size-xxs: px-to-rem(4); 
+
+@mixin container-layout {
+  display: flex;
+  justify-content: center;
+  padding-inline: $size-s;
+  margin: auto;
+  max-width: px-to-rem(1536);
+
+  @media (min-width: 769px) {
+    padding-inline: $size-l;
+  }
+}
+
+@mixin section-padding {
+  padding: $size-3xl 0;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+}

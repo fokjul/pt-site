@@ -1,0 +1,26 @@
+@import 'variables';
+
+.nav-link {
+  color: $color-white;
+  font-size: $font-size-body;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  background-color: $overlay-header-bg;
+  border-bottom: 1px solid $overlay-header-border;
+  z-index: 1000;
+}

@@ -1,0 +1,28 @@
+@import '../../../styles/partials/variables';
+
+.contact-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  &__icon {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__label {
+    font-size: $font-size-body;
+    font-weight: $font-weight-medium;
+    color: $color-text-heading;
+  }
+
+  &__value {
+    font-size: $font-size-body;
+    color: $color-text-muted;
+  }
+}

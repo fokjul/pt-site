@@ -1,0 +1,146 @@
+@import '../../../styles/partials/variables';
+@import '../../../styles/partials/mixins';
+@import '../../../styles/partials/layouts';
+
+.footer {
+  background-color: $color-black;
+  padding: 64px 0 32px;
+
+  &__container {
+    @include container-layout;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__logo-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    font-size: 14px;
+    border-radius: $radius-button-small;
+  }
+
+  &__logo-wordmark {
+    color: $color-white;
+    font-size: 20px;
+    font-weight: $font-weight-medium;
+  }
+
+  &__tagline {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__heading {
+    font-size: $font-size-h3;
+    line-height: $line-height-h3;
+    letter-spacing: $letter-spacing-h3;
+    font-weight: $font-weight-regular;
+    color: $color-white;
+    margin: 0;
+  }
+
+  &__link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__link {
+    color: $color-white;
+    font-size: $font-size-body;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__social-links {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: $radius-button-small;
+    color: $color-white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 32px;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: $font-size-small;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  @include tablet-only {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include mobile-only {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

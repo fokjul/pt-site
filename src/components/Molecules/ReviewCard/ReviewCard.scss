@@ -1,0 +1,40 @@
+@import '../../../styles/partials/variables';
+
+.review-card {
+  background-color: $color-white;
+  border: 1px solid $color-border-light;
+  border-radius: $radius-card;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__rating {
+    align-self: flex-start;
+  }
+
+  &__quote {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    color: $color-text-body;
+    font-style: italic;
+    margin: 0;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__name {
+    font-size: $font-size-body;
+    font-weight: $font-weight-medium;
+    color: $color-text-heading;
+  }
+
+  &__role {
+    font-size: $font-size-small;
+    color: $color-text-muted;
+  }
+}

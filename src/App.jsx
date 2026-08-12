@@ -1,29 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Layout/Header/Header';
-import Footer from './components/Layout/Footer/Footer';
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Services from './pages/Services/Services';
-import Booking from './pages/Booking/Booking';
-import './App.scss';
+import Header from './components/Organisms/Header/Header';
+import Hero from './components/Organisms/Hero/Hero';
+import AboutSection from './components/Organisms/AboutSection/AboutSection';
+import MembershipSection from './components/Organisms/MembershipSection/MembershipSection';
+import ReviewsSection from './components/Organisms/ReviewsSection/ReviewsSection';
+import ContactSection from './components/Organisms/ContactSection/ContactSection';
+import Footer from './components/Organisms/Footer/Footer';
+import './styles/partials/_index.scss';
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <Header />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/booking" element={<Booking />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="app">
+      <Header />
+      <main>
+        <Hero />
+        <AboutSection variant="A" />
+        <MembershipSection />
+        <ReviewsSection />
+        <AboutSection variant="B" />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

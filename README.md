@@ -1,11 +1,46 @@
-# React + Vite
+# PT-Site - IronPulse Gym Fitness Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the IronPulse Gym fitness website built with React 19, Vite 8, and SCSS.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React 19
+- Vite 8
+- SCSS (sass-embedded)
+- React Router DOM 7.0.2
+- Font Awesome
+- ESLint 9.15.0
+- Vitest 4.0.18 with Playwright
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
+
+### Prerequisites
+- Node.js 22 (see .nvmrc)
+- npm 10.x.x
+
+### Installation
+```bash
+npm install
+```
+
+### Development
+```bash
+npm run dev
+```
+
+### Build
+```bash
+npm run build
+```
+
+### Lint
+```bash
+npm run lint
+```
+
+### Preview
+```bash
+npm run preview
+```
 
 ## React Compiler
 

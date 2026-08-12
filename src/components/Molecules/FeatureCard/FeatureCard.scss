@@ -1,0 +1,35 @@
+@import '../../../styles/partials/variables';
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background-color: $overlay-white-10;
+  border: 1px solid $overlay-white-20;
+  border-radius: $radius-image;
+  backdrop-filter: blur(10px);
+
+  &__icon {
+    align-self: flex-start;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+    font-size: $font-size-body;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: $font-size-body;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+  }
+}

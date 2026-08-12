@@ -1,0 +1,60 @@
+@import '../../../styles/partials/variables';
+@import '../../../styles/partials/mixins';
+@import '../../../styles/partials/layouts';
+
+.membership-section {
+  @include section-padding;
+  background-color: $color-black;
+
+  &__container {
+    @include container-layout;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__heading {
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+    letter-spacing: $letter-spacing-h2;
+    font-weight: $font-weight-regular;
+    color: $color-white;
+    margin: 0;
+  }
+
+  &__subcopy {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+  }
+
+  &__plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @include tablet-only {
+    &__plans {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include mobile-only {
+    &__plans {
+      grid-template-columns: 1fr;
+    }
+
+    &__heading {
+      font-size: 32px;
+    }
+  }
+}
