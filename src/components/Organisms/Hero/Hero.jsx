@@ -12,7 +12,11 @@ const Hero = () => {
       <div className="hero__background"></div>
       <div className="hero__container">
         <div className="hero__content">
-          <h1 className="hero__heading">{heading}</h1>
+          <h1 className="hero__heading">
+            {heading.first}
+            <br />
+            <span className="hero__heading-accent">{heading.second}</span>
+          </h1>
           <p className="hero__subcopy">{subcopy}</p>
           <Button variant="primary" href={ctaButton.href} className="hero__cta">
             {ctaButton.label}
@@ -24,7 +28,7 @@ const Hero = () => {
               key={index}
               title={feature.title}
               description={feature.description}
-              icon={<circle cx="12" cy="12" r="10" />}
+              icon={feature.icon}
               className="hero__feature"
             />
           ))}

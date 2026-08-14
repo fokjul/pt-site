@@ -1,5 +1,6 @@
 // Centralized data file for IronPulse Gym website content
 // This file contains all copy/text that will be used throughout the site
+import { trophyIcon, kettlebellIcon, heartIcon } from '../assets/icons';
 
 export const siteContent = {
   header: {
@@ -22,7 +23,10 @@ export const siteContent = {
   },
 
   hero: {
-    heading: "Train Hard. Live Strong.",
+    heading: {
+      first: "Train Hard.",
+      second: "Live Strong."
+    },
     subcopy: "Transform your body and mind with world-class training expert guidance and a supportive community.",
     ctaButton: {
       label: "Get free class",
@@ -32,17 +36,17 @@ export const siteContent = {
       {
         title: "Strength for daily life",
         description: "Full-body training for all fitness levels",
-        icon: "strength"
+        icon: trophyIcon
       },
       {
         title: "Small group coached classes",
         description: "Small group coached classes",
-        icon: "group"
+        icon: kettlebellIcon
       },
       {
         title: "Community",
         description: "Join a supportive fitness family",
-        icon: "community"
+        icon: heartIcon
       }
     ]
   },

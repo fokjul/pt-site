@@ -1,18 +1,16 @@
-@import '../../../styles/partials/variables';
+@use '../../../styles/partials/variables' as v;
 
 .icon-chip {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $icon-chip-size;
-  height: $icon-chip-size;
-  background-color: $color-primary;
-  border-radius: $radius-icon-chip;
-  color: $color-white;
+  width: v.$icon-chip-size;
+  height: v.$icon-chip-size;
 
-  svg {
-    width: 24px;
-    height: 24px;
-    stroke-width: 2px;
+  img,
+svg {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
   }
 }

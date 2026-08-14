@@ -1,4 +1,4 @@
-# Design Requirements — "IronPulse Gym" / Yuliia Fok Fitness Website
+# Design Requirements — Yuliia Fok Fitness Website
 
 Source: Figma file `dHMLoXkJaAN7mm9FUgmID1` (node 5:2), cross-checked against the exported
 **Figma Make** project (`index.tsx`, 3182 lines, component `FitnessCentreWebsiteDesign`).
