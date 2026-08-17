@@ -3,13 +3,13 @@ import StatCard from '../../Molecules/StatCard/StatCard';
 import { siteContent } from '../../../data/siteContent';
 import './AboutSection.scss';
 
-const AboutSection = ({ variant = 'A' }) => {
+const AboutSection = ({ variant = 'A', id }) => {
   const content = variant === 'A' ? siteContent.about.variantA : siteContent.about.variantB;
   const { statBadge, bodyCopy, stats } = siteContent.about;
   const isImageLeft = variant === 'A';
 
   return (
-    <section className="about-section">
+    <section className="about-section" id={id}>
       <div className="about-section__container">
         <div className={`about-section__layout ${isImageLeft ? 'about-section__layout--image-left' : 'about-section__layout--image-right'}`}>
           <div className="about-section__image-wrapper">
@@ -35,7 +35,7 @@ const AboutSection = ({ variant = 'A' }) => {
                   key={index}
                   number={stat.number}
                   label={stat.label}
-                  icon={<circle cx="12" cy="12" r="10" />}
+                  icon={stat.icon}
                 />
               ))}
             </div>

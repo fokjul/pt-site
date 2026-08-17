@@ -14,10 +14,10 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <AboutSection variant="A" />
+        <AboutSection variant="A" id="classes" />
         <MembershipSection />
         <ReviewsSection />
-        <AboutSection variant="B" />
+        <AboutSection variant="B" id="about" />
         <ContactSection />
       </main>
       <Footer />

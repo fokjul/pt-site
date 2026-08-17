@@ -6,6 +6,7 @@
   justify-content: center;
   width: v.$icon-chip-size;
   height: v.$icon-chip-size;
+  cursor: default;
 
   img,
 svg {
@@ -13,4 +14,8 @@ svg {
   height: 32px;
   object-fit: contain;
   }
+}
+
+a.icon-chip {
+  cursor: pointer;
 }
