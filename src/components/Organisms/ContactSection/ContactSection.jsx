@@ -1,27 +1,9 @@
-import React, { useState } from 'react';
-import Button from '../../Atoms/Button/Button';
-import Input from '../../Atoms/Input/Input';
-import Textarea from '../../Atoms/Textarea/Textarea';
-import Select from '../../Atoms/Select/Select';
 import ContactInfoRow from '../../Molecules/ContactInfoRow/ContactInfoRow';
 import { siteContent } from '../../../data/siteContent';
 import './ContactSection.scss';
 
 const ContactSection = () => {
   const { heading, subcopy, contactInfo, form } = siteContent.contact;
-  const [formData, setFormData] = useState({});
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
 
   return (
     <section className="contact-section" id="contact">
@@ -49,52 +31,19 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          <form className="contact-section__form" onSubmit={handleSubmit}>
-            {form.fields.map((field, index) => {
-              if (field.type === 'textarea') {
-                return (
-                  <Textarea
-                    key={index}
-                    label={field.label}
-                    name={field.name}
-                    placeholder={field.placeholder}
-                    value={formData[field.name] || ''}
-                    onChange={handleChange}
-                    required={field.required}
-                  />
-                );
-              }
-              if (field.type === 'select') {
-                return (
-                  <Select
-                    key={index}
-                    label={field.label}
-                    name={field.name}
-                    placeholder={field.placeholder}
-                    options={field.options}
-                    value={formData[field.name] || ''}
-                    onChange={handleChange}
-                    required={field.required}
-                  />
-                );
-              }
-              return (
-                <Input
-                  key={index}
-                  label={field.label}
-                  type={field.type}
-                  name={field.name}
-                  placeholder={field.placeholder}
-                  value={formData[field.name] || ''}
-                  onChange={handleChange}
-                  required={field.required}
-                />
-              );
-            })}
-            <Button variant="primary" fullWidth type="submit">
-              {form.submitButton.label}
-            </Button>
-          </form>
+          <div className="contact-section__form contact-section__form--iframe">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScbuKZFp7UMYHRaejq9xJCaOCrocWk3rBf7woR-JGZTDixeIA/viewform?embedded=true"
+              width="100%"
+              height="1239"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              title="Contact form"
+            >
+              Loading…
+            </iframe>
+          </div>
         </div>
       </div>
     </section>

@@ -185,48 +185,7 @@ export const siteContent = {
       }
     ],
     form: {
-      heading: "Join Group Class Today",
-      fields: [
-        {
-          name: "fullName",
-          label: "Full Name",
-          type: "text",
-          placeholder: "John Doe",
-          required: true
-        },
-        {
-          name: "email",
-          label: "Email",
-          type: "email",
-          placeholder: "john@example.com",
-          required: true
-        },
-        {
-          name: "phone",
-          label: "Phone Number",
-          type: "tel",
-          placeholder: "+1 (555) 123-4567",
-          required: true
-        },
-        {
-          name: "membership",
-          label: "Membership Option",
-          type: "select",
-          placeholder: "Select a plan",
-          options: ["2x / week", "3x / week", "Drop-in"],
-          required: true
-        },
-        {
-          name: "message",
-          label: "Message (Optional)",
-          type: "textarea",
-          placeholder: "Tell us about your fitness goals...",
-          required: false
-        }
-      ],
-      submitButton: {
-        label: "Submit Application"
-      }
+      heading: "Join Group Class Today"
     }
   },
 
