@@ -35,7 +35,7 @@ const AboutSection = ({ variant = 'A', id }) => {
                   key={index}
                   number={stat.number}
                   label={stat.label}
-                  icon={<circle cx="12" cy="12" r="10" />}
+                  icon={stat.icon}
                 />
               ))}
             </div>
