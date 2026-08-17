@@ -1,18 +1,11 @@
 import React from 'react';
 import './IconChip.scss';
 
-const IconChip = ({ icon, href, className = '' }) => {
-  const chipClassName = `icon-chip ${className}`;
-  const img = <img src={icon} alt="" className="icon-chip__img" />;
-
-  if (!href) {
-    return <div className={chipClassName}>{img}</div>;
-  }
-
+const IconChip = ({ icon, className = '' }) => {
   return (
-    <a href={href} className={chipClassName}>
-      {img}
-    </a>
+    <div className={`icon-chip ${className}`}>
+      <img src={icon} alt="" className="icon-chip__img" />
+    </div>
   );
 };
 

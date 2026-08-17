@@ -72,17 +72,17 @@ export const siteContent = {
       {
         number: "5000+",
         label: "Members",
-        icon: heartIcon
+        icon: "person"
       },
       {
         number: "50+",
         label: "Expert Trainers",
-        icon: trophyIcon
+        icon: "trainer"
       },
       {
         number: "100+",
         label: "Classes Weekly",
-        icon: kettlebellIcon
+        icon: "calendar"
       }
     ]
   },
@@ -166,22 +166,22 @@ export const siteContent = {
       {
         label: "Address",
         value: "123 Fitness Avenue, Wellness District, New York, NY 10001",
-        icon: kettlebellIcon
+        icon: "address"
       },
       {
         label: "Phone",
         value: "+1 (555) 123-4567",
-        icon: trophyIcon
+        icon: "phone"
       },
       {
         label: "Email",
         value: "info@ironpulsegym.com",
-        icon: heartIcon
+        icon: "email"
       },
       {
         label: "Opening Hours",
         value: "Mon–Fri 5:00 AM–11:00 PM · Sat–Sun 7:00 AM–9:00 PM",
-        icon: kettlebellIcon
+        icon: "clock"
       }
     ],
     form: {
