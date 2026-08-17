@@ -39,7 +39,7 @@ const ContactSection = () => {
                   key={index}
                   label={info.label}
                   value={info.value}
-                  icon={<circle cx="12" cy="12" r="10" />}
+                  icon={info.icon}
                 />
               ))}
             </div>
