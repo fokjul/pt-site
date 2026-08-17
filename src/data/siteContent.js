@@ -246,7 +246,7 @@ export const siteContent = {
       {
         platform: "Instagram",
         href: "#instagram",
-        icon: "instagram"
+        icon: heartIcon
       }
     ],
     copyright: "© 2026 Yuliia Fok. All rights reserved."

@@ -33,9 +33,12 @@ const Footer = () => {
             <h4 className="footer__heading">Follow Us</h4>
             <div className="footer__social-links">
               {socialLinks.map((social, index) => (
-                <a key={index} href={social.href} className="footer__social-link">
-                  <IconChip icon={<circle cx="12" cy="12" r="10" />} />
-                </a>
+                <IconChip
+                  key={index}
+                  icon={social.icon}
+                  href={social.href}
+                  className="footer__social-link"
+                />
               ))}
             </div>
           </div>
