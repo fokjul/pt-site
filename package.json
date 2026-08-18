@@ -1,8 +1,20 @@
 {
   "name": "pt-site",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "This is the IronPulse Gym fitness website built with React 19, Vite 8, and SCSS.",
+  "homepage": "https://github.com/fokjul/pt-site#readme",
+  "bugs": {
+    "url": "https://github.com/fokjul/pt-site/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fokjul/pt-site.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

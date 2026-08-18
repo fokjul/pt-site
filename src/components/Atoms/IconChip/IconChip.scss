@@ -3,7 +3,7 @@
 .icon-chip {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   width: v.$icon-chip-size;
   height: v.$icon-chip-size;
 
@@ -12,5 +12,22 @@ svg {
   width: 32px;
   height: 32px;
   object-fit: contain;
+  }
+}
+
+.icon-chip-red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: v.$icon-chip-size;
+  height: v.$icon-chip-size;
+  background-color: v.$color-primary;
+  border-radius: v.$radius-icon-chip;
+  color: v.$color-white;
+
+  img, svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px;
   }
 }

@@ -1,6 +1,6 @@
 // Centralized data file for IronPulse Gym website content
 // This file contains all copy/text that will be used throughout the site
-import { trophyIcon, kettlebellIcon, heartIcon } from '../assets/icons';
+import { trophyIcon, kettlebellIcon, heartIcon, locationIcon, phoneIcon, emailIcon, clockIcon, instagramIcon } from '../assets/icons';
 
 export const siteContent = {
   header: {
@@ -35,13 +35,13 @@ export const siteContent = {
     features: [
       {
         title: "Strength for daily life",
-        description: "Full-body training for all fitness levels",
-        icon: trophyIcon
+        description: "Full-body training with kettlebells for all fitness levels",
+        icon: kettlebellIcon
       },
       {
         title: "Small group coached classes",
-        description: "Small group coached classes",
-        icon: kettlebellIcon
+        description: "Learn safe, proper form with expert guidance",
+        icon: trophyIcon
       },
       {
         title: "Community",
@@ -53,7 +53,7 @@ export const siteContent = {
 
   about: {
     variantA: {
-      heading: "About Kettlebell Classes",
+      heading: "About Group Classes",
       imageAlt: "Gym interior"
     },
     variantB: {
@@ -121,10 +121,10 @@ export const siteContent = {
     subcopy: "Real stories from real people who transformed their lives at IronPulse Gym.",
     reviews: [
       {
-        name: "Sarah Johnson",
-        role: "Weight Loss Transformation",
-        quote: "IronPulse Gym changed my life. The trainers are amazing and the community is so supportive.",
-        rating: 5
+        name: "Marina Braune",
+        quote: "I'm really happy and satisfied with Yuliia's training. I usually do the boot camp and I always feel that I get the opportunity to exercise all the muscles in my body during class. Yuliia is an amazing instructor, and it's noticeable that she has a lot of knowledge regarding exercise.",
+        rating: 5,
+        link: "https://maps.app.goo.gl/72teAnTaqbLWrCVb7"
       },
       {
         name: "Mike Rodriguez",
@@ -160,28 +160,28 @@ export const siteContent = {
   },
 
   contact: {
-    heading: "Get In Touch",
+    heading: "Join Group Class Today",
     subcopy: "Ready to start your fitness journey? Fill out the form below and we'll get back to you.",
     contactInfo: [
       {
         label: "Address",
-        value: "123 Fitness Avenue, Wellness District, New York, NY 10001",
-        icon: "address"
+        value: "123 Fitness Avenue, Wellness District, Burnaby, BC ",
+        icon: locationIcon
       },
       {
         label: "Phone",
-        value: "+1 (555) 123-4567",
-        icon: "phone"
+        value: "+1(647)-563-0755",
+        icon: phoneIcon
       },
       {
         label: "Email",
-        value: "info@ironpulsegym.com",
-        icon: "email"
+        value: "julia.fok.fitness@gmail.com",
+        icon: emailIcon
       },
       {
         label: "Opening Hours",
         value: "Mon–Fri 5:00 AM–11:00 PM · Sat–Sun 7:00 AM–9:00 PM",
-        icon: "clock"
+        icon: clockIcon
       }
     ],
     form: {
@@ -245,8 +245,8 @@ export const siteContent = {
     socialLinks: [
       {
         platform: "Instagram",
-        href: "#instagram",
-        icon: "instagram"
+        href: "https://www.instagram.com/juliafok_fitness/",
+        icon: instagramIcon
       }
     ],
     copyright: "© 2026 Yuliia Fok. All rights reserved."

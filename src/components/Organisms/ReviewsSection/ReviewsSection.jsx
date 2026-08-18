@@ -18,7 +18,7 @@ const ReviewsSection = () => {
             <ReviewCard
               key={index}
               name={review.name}
-              role={review.role}
+              link={review.link}
               quote={review.quote}
               rating={review.rating}
             />

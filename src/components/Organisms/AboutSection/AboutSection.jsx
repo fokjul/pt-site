@@ -9,7 +9,7 @@ const AboutSection = ({ variant = 'A' }) => {
   const isImageLeft = variant === 'A';
 
   return (
-    <section className="about-section">
+    <section className="about-section" id='classes'>
       <div className="about-section__container">
         <div className={`about-section__layout ${isImageLeft ? 'about-section__layout--image-left' : 'about-section__layout--image-right'}`}>
           <div className="about-section__image-wrapper">
@@ -29,7 +29,7 @@ const AboutSection = ({ variant = 'A' }) => {
                 </p>
               ))}
             </div>
-            <div className="about-section__stats">
+            {/* <div className="about-section__stats">
               {stats.map((stat, index) => (
                 <StatCard
                   key={index}
@@ -38,7 +38,7 @@ const AboutSection = ({ variant = 'A' }) => {
                   icon={<circle cx="12" cy="12" r="10" />}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -31,22 +31,22 @@
   }
 }
 
-.icon-chip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: $icon-chip-size;
-  height: $icon-chip-size;
-  background-color: $color-primary;
-  border-radius: $radius-icon-chip;
-  color: $color-white;
+// .icon-chip {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: $icon-chip-size;
+//   height: $icon-chip-size;
+//   //background-color: $color-primary;
+//   border-radius: $radius-icon-chip;
+//   color: $color-white;
 
-  svg {
-    width: 24px;
-    height: 24px;
-    stroke-width: 2px;
-  }
-}
+//   svg {
+//     width: 24px;
+//     height: 24px;
+//     stroke-width: 2px;
+//   }
+// }
 
 .star-rating {
   display: flex;
